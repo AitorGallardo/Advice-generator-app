@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const APIURL = 'https://api.adviceslip.com/advice';
 
-const ReplaceWithCusomQuotationMark = (text) => {
+const replaceWithCusomQuotationMark = (text) => {
   const openingQuotation = '“';
   const closingQuotation = '”';
   return openingQuotation + text + closingQuotation;
@@ -10,19 +10,19 @@ const ReplaceWithCusomQuotationMark = (text) => {
 
 export const useCreateAdvice = () => {
   const [advice, setAdvice] = useState({ id: '', advice: '' });
-
-  useEffect(() => {
+  const fetchAdvice = () => {
     fetch(APIURL)
       .then((data) => data.json())
       .then(({ slip: res }) => {
         const id = res.id;
-        const advice = ReplaceWithCusomQuotationMark(res.advice);
+        const advice = replaceWithCusomQuotationMark(res.advice);
 
-        
         setAdvice({ id, advice });
       });
-
+  };
+  useEffect(() => {
+    fetchAdvice();
   }, []);
 
-  return [advice.id, advice.advice];
+  return [advice.id, advice.advice, fetchAdvice];
 };
