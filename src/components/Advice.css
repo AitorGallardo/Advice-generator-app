@@ -1,49 +1,57 @@
-.advice__container{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    background-color: var(--neutral-color-dark-grey-blue);
-    border-radius: 12px;
-    padding: 2.5rem 2.5rem 4rem 2.5rem;
-    gap: 1rem;
-    width: 444px;
+.advice__container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: var(--neutral-color-dark-grey-blue);
+  border-radius: 12px;
+  padding: 2.5rem 2.5rem 4rem 2.5rem;
+  gap: 1rem;
+  width: 444px;
 }
 
-.advice__id{
-    color: var(--primary-color-green);
-    font-family: var(--font-family);
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+.advice__id {
+  color: var(--primary-color-green);
+  font-family: var(--font-family);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
-.advice__phrase{
-    font-family: var(--font-family);
 
-    color: white;
-    font-size: var(--font-size-quote);
-    font-weight: 800;
+.advice__phrase {
+  font-family: var(--font-family);
+
+  color: white;
+  font-size: var(--font-size-quote);
+  font-weight: 800;
 }
 
-.advice__divisor_line{
-    width: 444px;
-    height: 16px;
-    background-repeat: no-repeat;
+.advice__divisor_line {
+  width: 444px;
+  height: 16px;
+  background-repeat: no-repeat;
 }
 
-button.advice__button{
-    width: 4rem;
-    height: 4rem;
-    background-color: var(--primary-color-green);;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
+button.advice__button {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--primary-color-green);
+  border-radius: 50%;
+  border: none; 
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
 }
+button.advice__button:hover {
+  color: #ffffff; /* set text color */
+  box-shadow: 0 0 10px #52ffa8; /* set blue glow */
+}
+
+/* 0be616 */
